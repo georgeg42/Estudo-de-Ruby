@@ -1,3 +1,4 @@
+#metodo initialize funciona como um construtor.
 # metodo attr_collector é um metodo que realiza a função dos getters e setters.
 # Inclui os metodos attr_reader(getters) e attr_writer(setters).
 
