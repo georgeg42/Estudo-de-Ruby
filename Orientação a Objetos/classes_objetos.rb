@@ -8,7 +8,9 @@
 # Um objeto criado pode ser apontado por varias variaves que conseguem modificar seus valores.
 
 class MinhaClasse
-
+  def imprimir_ola(nome)
+    puts ""
+  end
 end
 
 objeto = MinhaClasse.new
