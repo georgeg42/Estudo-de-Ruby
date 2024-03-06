@@ -1,22 +1,27 @@
 class Conta
-  saldo = 0
+  attr_writer :saldo
 
-  def depositar
-    puts "Insira o valor de deposito: "
-    puts "Valor depositado de 100 reais!"
-    saldo = 100
+  def initialize(saldo)
+    @saldo = saldo
   end
 
-  def transferir(conta)
-    puts "Tranferir 100 para #{conta}"
-    conta = saldo
-    saldo -= 100
+  def depositar()
+    puts "Insira o valor de deposito: "
+    valor = gets.chomp
+    puts "Valor depositado de #{valor} reais!"
+    @saldo = valor
+  end
+
+  def transferir(conta, valor)
+    puts "Tranferindo 100 para #{conta}"
+    @saldo = @saldo + valor
     puts "Valor transferido com sucesso"
+    puts "Saldo da conta: #{@saldo}"
   end
 end
 
-conta1 = Conta.new
-conta2 = conta.new
+conta1 = Conta.new(100)
+conta2 = Conta.new(100)
 
 conta1.depositar
-conta1.transferir
+conta1.transferir(conta2, 100)
